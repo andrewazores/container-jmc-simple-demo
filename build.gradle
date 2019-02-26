@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'es.andrewazor.containertest.Listener'
+                )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+}
+
+mainClassName = 'es.andrewazor.containertest.Listener'
+
