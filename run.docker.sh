@@ -21,7 +21,8 @@ set -e
 docker run --rm --net=jmx-test --name jmx-listener -p 9090:9090 -d andrewazores/container-jmx-docker-listener
 
 docker run \
-    --net=jmx-test \
+    --net jmx-test \
+    --name jmx-client \
     -e CONTAINER_DOWNLOAD_HOST=$CONTAINER_DOWNLOAD_HOST \
     -e CONTAINER_DOWNLOAD_PORT=$CONTAINER_DOWNLOAD_PORT \
     --rm -it andrewazores/container-jmx-client "$@"
