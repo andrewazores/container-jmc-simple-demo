@@ -1,4 +1,11 @@
+# Connect to the target JVM ;
 connect localhost:9091;
+
+# Start a new fixed-length recording of 30 seconds named "sockets" ;
+# with SocketRead and SocketWrite events enabled ;
 dump sockets 30 jdk.SocketRead:enabled=true,jdk.SocketWrite:enabled=true;
+
+# Wait for recording "sockets" to complete ;
 wait-for sockets;
+# Wait for someone to download "sockets" recording ;
 wait-for-download sockets;
