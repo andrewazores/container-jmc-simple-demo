@@ -1,1 +1,3 @@
-connect jmx-listener:9091;list-recording-options;list-event-types;
+connect jmx-listener:9091;
+list-recording-options;
+list-event-types;
