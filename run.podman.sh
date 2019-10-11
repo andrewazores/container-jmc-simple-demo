@@ -23,7 +23,7 @@ podman pod create --name jmx-test
 podman create --pod jmx-test \
     --name jmx-listener \
     --net=bridge \
-    -p 9090:9090 \
+    -p 9092:9092 \
     -d andrewazores/container-jmx-podman-listener
 
 podman create --pod jmx-test \

@@ -18,7 +18,7 @@ set +e
 docker network create --attachable jmx-test
 set -e
 
-docker run --rm --net=jmx-test --name jmx-listener -p 9090:9090 -d andrewazores/container-jmx-docker-listener
+docker run --rm --net=jmx-test --name jmx-listener -p 9092:9092 -d andrewazores/container-jmx-docker-listener
 
 docker run \
     --net jmx-test \

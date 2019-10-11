@@ -1,5 +1,5 @@
 # Connect to the target JVM ;
-connect localhost:9091;
+connect localhost:9093;
 
 # Start a new fixed-length recording of 30 seconds named "sockets" ;
 # with SocketRead and SocketWrite events enabled ;

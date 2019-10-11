@@ -23,4 +23,10 @@ jar {
 }
 
 mainClassName = 'es.andrewazor.containertest.Listener'
+applicationDefaultJvmArgs = [
+    '-Dcom.sun.management.jmxremote.port=9093',
+    '-Dcom.sun.management.jmxremote.ssl=false',
+    '-Dcom.sun.management.jmxremote.authenticate=false',
+    '-Dcom.sun.management.jmxremote.autodiscovery=true',
+]
 
