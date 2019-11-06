@@ -10,5 +10,3 @@ fi
 ./gradlew clean build
 $CMD build -f Dockerfile.docker.listener -t andrewazores/container-jmx-docker-listener:latest .
 $CMD build -f Dockerfile.podman.listener -t andrewazores/container-jmx-podman-listener:latest .
-$CMD push andrewazores/container-jmx-docker-listener
-$CMD push andrewazores/container-jmx-podman-listener
